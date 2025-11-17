@@ -1,77 +1,59 @@
 body {
-    font-family: Georgia, serif;
-    background: #eadfcb;
     margin: 0;
-    padding: 0;
-    text-align: center;
-}
-
-h1 {
-    margin-top: 25px;
-    color: #3e2e1c;
-    text-shadow: 1px 1px 3px #bfa98a;
-}
-
-.bibliotheque {
-    position: relative;
-    width: 70%;
-    height: 500px;
-    margin: 40px auto;
-    border: 10px solid #403224;
-    border-radius: 8px;
     overflow: hidden;
-
-    box-shadow:
-        inset 0 0 40px rgba(0,0,0,0.5),
-        0 0 20px rgba(0,0,0,0.4);
+    background: #0e0a0a;
+    font-family: sans-serif;
 }
 
-.background {
+.scene {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+.bg {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: sepia(30%) contrast(1.1) brightness(0.9) saturate(1.2);
 }
 
-/* --- LIVRES RÉALISTES --- */
 .livre {
+    width: 200px;
     position: absolute;
-    width: 45px;
-    height: 70px;
-    top: -100px;
-    left: var(--left);
-
-    background: linear-gradient(90deg,
-        #5f2e0a 0%,
-        #7a3e14 40%,
-        #8c4b18 60%,
-        #d1a148 75%,
-        #6c3610 100%
-    );
-
-    border-radius: 4px;
-    box-shadow:
-        inset -2px 0 5px rgba(255, 215, 100, 0.4),
-        4px 4px 10px rgba(0,0,0,0.5);
-
-    transform-origin: top left;
-
-    animation: tomber 2.8s ease-in-out forwards;
-    animation-delay: var(--delay);
+    top: -250px; 
+    left: 50%;
+    transform: translateX(-50%);
 }
 
-/* --- ANIMATION AMÉLIORÉE AVEC ROTATION + REBOND --- */
-@keyframes tomber {
-    0% {
-        transform: translateY(0) rotate(-15deg);
-    }
-    70% {
-        transform: translateY(420px) rotate(8deg);
-    }
-    85% {
-        transform: translateY(400px) rotate(-4deg);
-    }
-    100% {
-        transform: translateY(420px) rotate(0deg);
-    }
+.page {
+    width: 220px;
+    position: absolute;
+    top: 300px;
+    left: 50%;
+    transform: translateX(-50%) rotateY(90deg);
+    opacity: 0;
+}
+
+/* Conteneur des particules */
+.particles {
+    position: absolute;
+    top: 330px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 200px;
+    pointer-events: none;
+    opacity: 0;
+    overflow: visible;
+}
+
+/* Particule blanche lumineuse */
+.particle {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 0 8px white;
+    opacity: 0;
 }
