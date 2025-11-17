@@ -7,4 +7,4 @@ function relancerAnimation() {
     });
 }
 
-setInterval(relancerAnimation, 5000);
+setInterval(relancerAnimation, 6000);
