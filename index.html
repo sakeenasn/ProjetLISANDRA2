@@ -2,22 +2,22 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Animation - Livres anciens</title>
+    <title>Animation Livre Magique</title>
     <link rel="stylesheet" href="style.css">
+
+    <!-- Anime.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
 </head>
 <body>
 
-<h1>Bibliothèque XVIIIᵉ siècle – Animation améliorée</h1>
+<div class="scene">
+    <img src="assets/bibliotheque.png" class="bg">
 
-<div class="bibliotheque">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/Old_library_shelves.jpg"
-         class="background">
+    <img src="assets/livre.png" class="livre" id="livre">
+    <img src="assets/page1.png" class="page" id="page1">
 
-    <!-- Livres -->
-    <div class="livre" style="--delay: 0s; --left: 18%;"></div>
-    <div class="livre" style="--delay: 0.8s; --left: 33%;"></div>
-    <div class="livre" style="--delay: 1.5s; --left: 56%;"></div>
-    <div class="livre" style="--delay: 2.3s; --left: 74%;"></div>
+    <!-- Conteneur des particules -->
+    <div class="particles" id="particles"></div>
 </div>
 
 <script src="script.js"></script>
